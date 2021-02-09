@@ -1,4 +1,4 @@
-name: sigo-config
+name: sigo-registro-servico
 image: docker.io/brunoferreirag/sigo-registro-servico:latest
 sync:
 - .:/workspace/app/
