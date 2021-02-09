@@ -19,7 +19,7 @@ spec:
         image: docker.io/brunoferreirag/sigo-registro-servico:latest
         ports:
         - containerPort: 8761
-          name: sigo-registro-servico
+          name: sigo-registro
         resources:
           requests:
             memory: "128Mi"
