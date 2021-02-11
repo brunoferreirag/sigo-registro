@@ -1,7 +1,5 @@
-name: sigo-registro
-image: okteto/maven
-command: ["mvn", "spring-boot:run" ]
-workdir: /workspace/app/
+name: sigo-registro-servico
+image: docker.io/brunoferreirag/sigo-registro-servico:latest
 sync:
 - .:/workspace/app/
 persistentVolume:
