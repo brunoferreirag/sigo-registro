@@ -33,11 +33,12 @@ kind: Service
 metadata:
   name: sigo-registro-servico
 spec:
+  type: LoadBalancer 
+  ports:
+    - name: sigo-registro
+      protocol: TCP
+      port: 8761
   selector:
     app: sigo-registro-servico
-  ports:
-    - protocol: TCP
-      port: 8761
-      targetPort: 8761
-      name: tcp-8761
+    
 ---
