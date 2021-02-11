@@ -1,4 +1,4 @@
-name: sigo-registro-servico
+name: sigo-registro
 image: okteto/maven
 command: ["mvn", "spring-boot:run" ]
 workdir: /workspace/app/
