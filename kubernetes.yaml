@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sigo-registro-servico
+  name: sigo-registro
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sigo-registro-servico
+      app: sigo-registro
   template:
     metadata:
       labels:
-        app: sigo-registro-servico
+        app: sigo-registro
     spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-      - name: sigo-registro-servico
+      - name: sigo-registro
         image: docker.io/brunoferreirag/sigo-registro-servico:latest
         ports:
         - containerPort: 8761
@@ -31,10 +31,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sigo-registro-servico
+  name: sigo-registro
 spec:
   selector:
-    app: sigo-registro-servico
+    app: sigo-registro
   ports:
     - protocol: TCP
       port: 8761
