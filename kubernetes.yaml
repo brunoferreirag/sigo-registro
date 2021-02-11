@@ -39,6 +39,5 @@ spec:
       protocol: TCP
       port: 8761
   selector:
-    app: sigo-registro-servico
-    
+    app: sigo-registro-servico    
 ---
