@@ -22,5 +22,5 @@ COPY --from=build application/spring-boot-loader/ ./
 COPY --from=build application/snapshot-dependencies/ ./
 COPY --from=build application/application/ ./
 EXPOSE 8761
-ENV JAVA_TOOL_OPTIONS "-Xms256m -Xmx512m"
+ENV JAVA_OPTS -Xms256m -Xmx512m
 ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
